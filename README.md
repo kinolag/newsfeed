@@ -1,3 +1,6 @@
+# newsfeed
+a responsive web app that shows a feed of articles returned by an API
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
