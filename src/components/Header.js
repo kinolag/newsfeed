@@ -9,23 +9,27 @@ export default function Header() {
     >
       <div
         className="multi-wrapper radius-4 text-plain"
-        style={{ border: "1px solid #d30d1d", width: "98%" }}
+        style={{ border: "1px solid #d30d1d", width: "97%" }}
       >
-        <h3 className="is-main-red news-headline">
-          &nbsp;Simple NewsFeed&nbsp;
-        </h3>
+        <div>
+          <h3 className="is-main-red news-headline">
+            &nbsp;Simple NewsFeed&nbsp;
+          </h3>
+        </div>
         <div
-          className="row-wrapper is-almost-black mar-b-12"
-          style={{ alignItems: "flex-end" }}
+          className="row-wrapper is-almost-black"
+          style={{ alignItems: "center" }}
         >
           <span className="is-grey" style={{ fontSize: "16px" }}>
             &nbsp;A React app for
           </span>
-          <img
-            style={{ height: "25px", width: "auto", padding: "3px 7px" }}
-            src={slogo}
-            alt="Logo"
-          />
+          <div>
+            <img
+              style={{ height: "25px", width: "auto", padding: "3px 7px" }}
+              src={slogo}
+              alt="Logo"
+            />
+          </div>
           &nbsp;
         </div>
       </div>

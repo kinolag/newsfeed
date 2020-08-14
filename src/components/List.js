@@ -5,7 +5,9 @@ function List() {
   /* we check for a positive response, otherwise if fetch fails we catch and log the error */
   async function newsFetcher() {
     try {
-      const response = await fetch(url);
+      /* open proxy, needed to prevent cors-related issue fetching from News API */
+      const proxy1 = "https://cors-anywhere.herokuapp.com/";
+      const response = await fetch(proxy1 + url);
       if (response.status === 200) {
         const res = response.json();
         return res;
@@ -22,7 +24,7 @@ function List() {
 
   /* country is one of several filters that can be used fetching News API */
   const url =
-    "http://newsapi.org/v2/top-headlines?" +
+    "https://newsapi.org/v2/top-headlines?" +
     `country=${countryFilter}&` +
     `apiKey=${API_KEY}`;
 
@@ -30,15 +32,20 @@ function List() {
 
   useEffect(() => {
     newsFetcher().then((response) => {
-      const articles = response.articles;
-      updateNews(articles);
+      if (response) {
+        const articles = response.articles;
+        updateNews(articles);
+      }
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [countryFilter]);
 
   return (
     <section className="column-wrapper news-list pad-15">
-      <Selector countryFilter={countryFilter} setCountryFilter={setCountryFilter} />
+      <Selector
+        countryFilter={countryFilter}
+        setCountryFilter={setCountryFilter}
+      />
 
       {news.map((article) => {
         const domain = article.url.split("/")[2];
