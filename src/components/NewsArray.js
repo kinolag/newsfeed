@@ -7,7 +7,7 @@ export const NewsArray = [
   {
     id: "0002",
     headline: "Test headline 0002",
-    body: "One more piece of text for news item 0002",
+    body: "You are reading a fresh piece of text for news item 0002, somehow longer than text of 0001. The purpose of this is to test page layout and spacing, among other things.",
   },
   {
     id: "0003",
