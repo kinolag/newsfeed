@@ -72,6 +72,7 @@ button {
 .news-body {
   font-size: 18px;
   line-height: 23px;
+  text-align: justify;
 }
 
 .text-plain {
@@ -197,6 +198,15 @@ is-grey {
 
   .news-item {
     border: 1px solid #498eb5;
+  }
+
+  .news-body {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .a1 {
+    align-self: center;
   }
 
   .column-moving-center {
