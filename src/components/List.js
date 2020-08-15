@@ -6,8 +6,8 @@ function List() {
   async function newsFetcher() {
     try {
       /* open proxy, needed to prevent cors-related issue fetching from News API */
-      const proxy1 = "https://cors-anywhere.herokuapp.com/";
-      const response = await fetch(proxy1 + url);
+      const proxy = "https://cors-anywhere.herokuapp.com/";
+      const response = await fetch(proxy + url);
       if (response.status === 200) {
         const res = response.json();
         return res;
@@ -82,7 +82,7 @@ function List() {
                   className="radius-8"
                   src={article.urlToImage}
                   alt={article.title}
-                  style={{ width: "75%", height: "auto" }}
+                  style={{ width: "74%", height: "auto" }}
                 />
               </span>
             )}

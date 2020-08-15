@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div className="center-wrapper" style={{ width: "100%" }}>
-        <div className="content-area mar-10 radius-8">
+        <div className="content-area mar-5 radius-8">
           <Header />
           <Main />
         </div>

@@ -28,7 +28,7 @@ button {
 }
 
 .content-area {
-  width: 60%;
+  width: 65%;
 }
 
 .column-wrapper {
@@ -59,7 +59,7 @@ button {
 .news-item {
   border: 2px solid #d3d3d3;
   border-radius: 8px;
-  margin: 8px 10px;
+  margin: 8px 4px;
 }
 
 /* Text classes  */
@@ -71,7 +71,7 @@ button {
 
 .news-body {
   font-size: 18px;
-  line-height: 23px;
+  line-height: 22px;
   text-align: justify;
 }
 
@@ -193,16 +193,11 @@ is-grey {
   }
 
   .content-area {
-    width: 95%;
+    width: 97%;
   }
 
   .news-item {
     border: 1px solid #498eb5;
-  }
-
-  .news-body {
-    font-size: 20px;
-    line-height: 25px;
   }
 
   .a1 {

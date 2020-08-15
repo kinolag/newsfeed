@@ -21,8 +21,8 @@ export default function Selector({ countryFilter, setCountryFilter }) {
   const editions = ["gb", "us", "au", "fr", "it", "de", "nz"];
   return (
     <section
-      className="center-wrapper"
-      style={{ border: "0px solid red", width: "100%" }}
+      className="center-wrapper radius-8"
+      style={{ border: "0px solid red", width: "100%", background: "rgba(240, 240, 240, 0.44)", }}
     >
       <div
         className="row-wrapper mar-b-12 text-plain"
