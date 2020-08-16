@@ -19,13 +19,17 @@ function List() {
 
   /* set different value to change default edition */
   const [countryFilter, setCountryFilter] = useState("gb");
+  const [categoryFilter, setCategoryFilter] = useState("general");
 
   const API_KEY = process.env.REACT_APP_NEWSAPI_KEY;
+
+  
 
   /* country is one of several filters that can be used fetching News API */
   const url =
     "https://newsapi.org/v2/top-headlines?" +
     `country=${countryFilter}&` +
+    `category=${categoryFilter}&` +
     `apiKey=${API_KEY}`;
 
   const [news, updateNews] = useState([]);
@@ -38,13 +42,15 @@ function List() {
       }
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [countryFilter]);
+  }, [countryFilter, categoryFilter]);
 
   return (
     <section className="column-wrapper news-list pad-15">
       <Selector
         countryFilter={countryFilter}
         setCountryFilter={setCountryFilter}
+        categoryFilter={categoryFilter}
+        setCategoryFilter={setCategoryFilter}
       />
 
       {news.map((article) => {
