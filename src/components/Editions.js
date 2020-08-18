@@ -1,11 +1,11 @@
 import React from "react";
 
 /** encapsulated helper component to prevent code repetition in rows.
- * filter can vary.
+ * filter may vary.
  * className applied conditionally on selection.
  * */
 const Button = ({ currentValue, filter, setFilter }) => {
-  /* NB: there may be other speial cases like "gb", always check on addition */
+  /* NB: there may be other special cases like "gb", always check on addition */
   const valueDisplay = (currentValue === "gb"
     ? "uk"
     : currentValue === "technology"
@@ -28,7 +28,7 @@ export default function Selector({
   categoryFilter,
   setCategoryFilter,
 }) {
-  /* this is one of several filters that can be used fetching News API */
+  /* these are two several filters that can be used fetching News API */
   const editions = ["gb", "us", "au", "fr", "it", "de", "nz"];
   const categories = ["general", "technology", "science"];
   return (
@@ -48,7 +48,7 @@ export default function Selector({
           justifyContent: "space-between",
         }}
       >
-        {/* not all elements are mapped here for layout reasons (0 and 1 are in row above) */}
+        {/* we set default category in local state as "general" (all news) */}
         {categories.map((category) => (
           <Button
             key={category}
@@ -88,7 +88,7 @@ export default function Selector({
           justifyContent: "space-between",
         }}
       >
-        {/* not all elements are mapped here for layout reasons (0 and 1 are in row above) */}
+        {/* not all array elements are mapped here for layout reasons (0 and 1 are part of previous row) */}
         {editions.slice(2).map((edition) => (
           <Button
             key={edition}
