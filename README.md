@@ -1,5 +1,5 @@
 # newsfeed
-A responsive web React app that shows a feed of articles returned by an API.<br />
+A responsive web React app that shows a feed of articles returned by News API.<br />
 Users can select news by country or category, two of the filters that can be applied when fetching.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
